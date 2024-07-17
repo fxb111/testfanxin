@@ -21,6 +21,7 @@ public class MessageAckReceiver implements ChannelAwareMessageListener {
       System.out.println("消息来自队列: " + message.getMessageProperties().getConsumerQueue());
       System.out.println("111");
       System.out.println("222");
+      System.out.println("333");
       channel.basicAck(deliverTag, true);
     } catch (Exception e) {
       e.printStackTrace();
