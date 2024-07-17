@@ -22,6 +22,7 @@ public class MessageAckReceiver implements ChannelAwareMessageListener {
       System.out.println("111");
       System.out.println("222");
       System.out.println("333");
+      System.out.println("444");
       channel.basicAck(deliverTag, true);
     } catch (Exception e) {
       e.printStackTrace();
