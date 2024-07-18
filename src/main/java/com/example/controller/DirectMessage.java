@@ -8,7 +8,7 @@
 //
 //@Component
 //@RabbitListener(queues = "DirectQueue")
-//public class Receiver {
+//public class DirectMessage {
 //
 //  @RabbitHandler
 //  public void receiverDirect(Map message) {

@@ -22,7 +22,7 @@ public class RabbitMessageConfig {
     container.setAcknowledgeMode(AcknowledgeMode.MANUAL);
     container.setConcurrentConsumers(1);
     container.setMaxConcurrentConsumers(1);
-    container.setQueueNames("DirectQueue", "fanoutQueue1");
+    container.setQueueNames("DirectQueue", "fanoutQueue1", "fanoutQueue2", "fanoutQueue3");
     container.setMessageListener(messageAckReceiver);
     return container;
   }

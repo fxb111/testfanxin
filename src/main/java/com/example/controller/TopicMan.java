@@ -13,7 +13,7 @@ public class TopicMan {
 
   @RabbitHandler
   public void receiverMan(Map message) {
-    System.out.println(message);
+    System.out.println("man: " + message);
   }
 
 }

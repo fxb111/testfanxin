@@ -13,8 +13,6 @@ public class TopicWoman {
 
   @RabbitHandler
   public void receiverWoman(Map message) {
-    System.out.println(message);
+    System.out.println("woman: " + message);
   }
-
-
 }
