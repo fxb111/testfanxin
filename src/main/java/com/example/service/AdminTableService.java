@@ -5,7 +5,9 @@ import com.example.domain.AdminTable;
 import com.example.query.LoginQuery;
 import com.example.utils.R;
 
-public interface AdminService extends IService<AdminTable> {
+public interface AdminTableService extends IService<AdminTable> {
   R<String> adminLogin(LoginQuery loginQuery);
+
+  R<String> adminTest();
 
 }

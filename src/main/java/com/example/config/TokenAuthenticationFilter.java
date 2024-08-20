@@ -13,7 +13,7 @@ import java.util.Set;
 @Component
 public class TokenAuthenticationFilter implements Filter {
 
-  private TokenService tokenService;
+  private final TokenService tokenService;
 
   private final Set<String> whiteList = new HashSet<>();
 

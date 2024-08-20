@@ -3,11 +3,11 @@ package com.example.service;
 import jakarta.annotation.Resource;
 
 
-import net.sf.jsqlparser.statement.select.KSQLWindow;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.security.SecureRandom;
+import java.time.Duration;
 import java.util.Base64;
 
 @Service
@@ -21,12 +21,7 @@ public class TokenService {
     byte[] token = new byte[24];
     secureRandom.nextBytes(token);
     String tokenStr = Base64.getUrlEncoder().withoutPadding().encodeToString(token);
-
-    redisTemplate.opsForValue().set(tokenStr, username, 60);
-
-    String user = (String) redisTemplate.opsForValue().get(tokenStr);
-    System.out.println(user);
-
+    redisTemplate.opsForValue().set(tokenStr, username, Duration.ofMinutes(60));
     return tokenStr;
   }
 
